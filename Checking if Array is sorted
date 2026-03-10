@@ -1,0 +1,15 @@
+#include <vector>
+
+class Solution {
+public:
+    bool isSorted(std::vector<int>& arr) {
+        // Iterate through the array starting from the second element
+        for (int i = 1; i < arr.size(); i++) {
+            // Check if the previous element is greater than the current element
+            if (arr[i - 1] > arr[i]) {
+                return false; // Not sorted in ascending order
+            }
+        }
+        return true; // All elements were in ascending order
+    }
+};

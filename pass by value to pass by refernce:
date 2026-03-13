@@ -1,0 +1,16 @@
+// Using pas by value as refernce we need to paste (&)
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+void changed(int &b){
+  b = b + 10;
+}
+int main(){
+  int a=50;
+  changed(a);
+  cout<<a;
+   return 0;
+} 
+
